@@ -997,6 +997,10 @@ public class SootClass extends AbstractHost implements Numberable {
 
 	/** Makes this class an application class. */
 	public void setApplicationClass() {
+		// Class should have already been added
+		if (!Scene.v().getClasses().contains(this))
+			throw new IllegalStateException();
+
 		if (isApplicationClass())
 			return;
 		Chain<SootClass> c = Scene.v().getContainingChain(this);
@@ -1018,6 +1022,10 @@ public class SootClass extends AbstractHost implements Numberable {
 
 	/** Makes this class a library class. */
 	public void setLibraryClass() {
+		// Class should have already been added
+		if (!Scene.v().getClasses().contains(this))
+			throw new IllegalStateException();
+
 		if (isLibraryClass())
 			return;
 		Chain<SootClass> c = Scene.v().getContainingChain(this);
@@ -1056,6 +1064,10 @@ public class SootClass extends AbstractHost implements Numberable {
 
 	/** Makes this class a phantom class. */
 	public void setPhantomClass() {
+		// Class should have already been added
+		if (!Scene.v().getClasses().contains(this))
+			throw new IllegalStateException();
+
 		Chain<SootClass> c = Scene.v().getContainingChain(this);
 		if (c != null)
 			c.remove(this);
