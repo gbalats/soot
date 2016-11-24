@@ -18,7 +18,7 @@
  */
 
 /*
- * Modified by the Sable Research Group and others 1997-1999.  
+ * Modified by the Sable Research Group and others 1997-1999.
  * See the 'credits' file distributed with Soot for the complete list of
  * contributors.  (Soot is distributed at http://www.sable.mcgill.ca/soot)
  */
@@ -134,7 +134,7 @@ public class SootClass extends AbstractHost implements Numberable {
 	/**
 	 * Checks if the class has at lease the resolving level specified. This
 	 * check does nothing is the class resolution process is not completed.
-	 * 
+	 *
 	 * @param level
 	 *            the resolution level, one of DANGLING, HIERARCHY, SIGNATURES,
 	 *            and BODIES
@@ -150,7 +150,7 @@ public class SootClass extends AbstractHost implements Numberable {
 	/**
 	 * Checks if the class has at lease the resolving level specified. This
 	 * check ignores the resolution completeness.
-	 * 
+	 *
 	 * @param level
 	 *            the resolution level, one of DANGLING, HIERARCHY, SIGNATURES,
 	 *            and BODIES
@@ -454,7 +454,7 @@ public class SootClass extends AbstractHost implements Numberable {
 				currentMethod = internalIterator.next();
 				return currentMethod;
 			}
-			
+
 			@Override
 			public void remove() {
 				internalIterator.remove();
@@ -462,7 +462,7 @@ public class SootClass extends AbstractHost implements Numberable {
 				subSigToMethods.put(currentMethod.getNumberedSubSignature(), null);
 				currentMethod.setDeclared(false);
 			}
-		}; 
+		};
 	}
 
 	public List<SootMethod> getMethods() {
@@ -1032,7 +1032,7 @@ public class SootClass extends AbstractHost implements Numberable {
 	 * Sometimes we need to know which class is a JDK class. There is no simple
 	 * way to distinguish a user class and a JDK class, here we use the package
 	 * prefix as the heuristic.
-	 * 
+	 *
 	 * @author xiao
 	 */
 	public boolean isJavaLibraryClass() {
@@ -1145,7 +1145,7 @@ public class SootClass extends AbstractHost implements Numberable {
 	/**
 	 * Returns an array containing some validators in order to validate the
 	 * SootClass
-	 * 
+	 *
 	 * @return the array containing validators
 	 */
 	private synchronized static ClassValidator[] getValidators() {
